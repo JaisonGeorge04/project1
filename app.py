@@ -16,8 +16,8 @@ Provide the feature values below. The model predicts whether the tumor is:
 # -------------------------
 # Load Model and Scaler
 # -------------------------
-model_path = "gradient_boosting_model.pkl"
-scaler_path = "scaler.pkl"
+model_path = "logistic.pkl"
+scaler_path = "gbc.pkl"
 
 if not os.path.isfile(model_path) or not os.path.isfile(scaler_path):
     st.error("Model files not found. Upload 'gradient_boosting_model.pkl' and 'scaler.pkl' to the same directory.")
@@ -84,3 +84,4 @@ if st.button("Predict"):
 
     except Exception as e:
         st.error(f"Error during prediction: {e}")
+
